@@ -30,6 +30,7 @@ export default defineEventHandler(async (event) => {
     await PImage.encodePNGToStream(dummy, passThrough);
 
     setHeader(event, "Content-Type", "image/png");
+    setHeader(event, "Access-Control-Allow-Origin", "*");
 
     return passThrough;
 });

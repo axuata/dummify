@@ -7,10 +7,6 @@ onMounted(() => {
   canvasElement = document.getElementById("canvas") as HTMLCanvasElement;
 })
 
-function getAverage(min: number, max: number): number {
-  return (min + max) / 2;
-}
-
 function generate(): void {
   if (canvasElement) {
     const context = canvasElement.getContext('2d');

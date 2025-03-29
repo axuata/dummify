@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Dummify",
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      meta: [
+        { name: 'description', content: '🪟 Placeholder Generator Service' },
+        { name: 'google-site-verification', content: 'Vh7jScbMBYTY7d2oBDu8v8e_g8_Z-V6_H-9ZwwP19kQ' }
+      ],
       htmlAttrs: {
         lang: 'ja',
       },

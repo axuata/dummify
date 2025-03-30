@@ -13,10 +13,6 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  value: {
-    type: [String, Number],
-    required: true,
-  }
 });
 
 function updateModel(event: Event) {
@@ -27,7 +23,7 @@ function updateModel(event: Event) {
 
 <template>
   <div>
-    <input :type="props.type" :placeholder="props.placeholder" :style="{ width: props.length }" class="b-(solid 1px gray-2) px-6px py-2px rounded-8px" @input="updateModel($event)" :value="props.value" />
+    <input :type="props.type" :placeholder="props.placeholder" :style="{ width: props.length }" class="b-(solid 1px gray-2) px-6px py-2px rounded-8px" @input="updateModel($event)" />
   </div>
 </template>
 

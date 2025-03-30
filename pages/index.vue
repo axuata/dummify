@@ -84,15 +84,15 @@ function download(type: 'png' | 'jpeg') {
       <CSection title="Options" class="w-400px">
         <div class="flex items-center justify-between px-8px py-4px">
           <p class="text-gray-6">Width</p>
-          <CInput v-model="imageWidth" type="number" placeholder="1920" length="200px" :value="0" />
+          <CInput v-model="imageWidth" type="number" placeholder="1920" length="200px" />
         </div>
         <div class="flex items-center justify-between px-8px py-4px">
           <p class="text-gray-6">Height</p>
-          <CInput v-model="imageHeight" type="number" placeholder="1080" length="200px" :value="0" />
+          <CInput v-model="imageHeight" type="number" placeholder="1080" length="200px" />
         </div>
         <div class="flex items-center justify-between px-8px py-4px">
           <p class="text-gray-6">Custom Text</p>
-          <CInput v-model="imageText" type="string" placeholder="" length="200px" value="" />
+          <CInput v-model="imageText" type="string" placeholder="" length="200px" />
         </div>
         <p>{{ imageWarning }}</p>
         <hr class="m-5px" />

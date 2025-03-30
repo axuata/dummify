@@ -1,5 +1,4 @@
-import presetWind3 from '@unocss/preset-wind3'
-import {defineConfig, transformerDirectives, transformerVariantGroup, presetIcons} from 'unocss';
+import {defineConfig, presetWind3, transformerDirectives, transformerVariantGroup, presetIcons} from 'unocss';
 
 export default defineConfig({
     presets: [

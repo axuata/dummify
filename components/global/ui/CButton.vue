@@ -8,8 +8,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="font-en">
-    <button class="b-(solid 1px gray-3) rounded-10px px-8px py-5px font-500 bg-#f9f9fb text-gray-7 text-14px hover:bg-gray-1 transition-colors duration-150">{{ props.label }}</button>
+  <div>
+    <button class="px-7px py-5px text-14px text-gray-7 bg-#f9f9fb rounded-10px b-(solid 1px gray-3) hover:bg-gray-2 transition-colors duration-100">{{ props.label }}</button>
   </div>
 </template>
 

@@ -2,6 +2,6 @@ body {
     @apply bg-#f9f9fb ;
 }
 
-.font-en {
+* {
     font-family: 'Inter', system-ui;
 }

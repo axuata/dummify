@@ -9,30 +9,38 @@ onMounted(() => {
 })
 
 function generate(): void {
-  if (canvasElement) {
-    if (imageWidth.value >= 20000 || imageHeight.value >= 20000) {
-      warning.value = "The size cannot be greater than 20000."
-      return;
-    } else {
-      warning.value = "";
+  console.log("Generating...");
+
+  try {
+    if (canvasElement) {
+      if (imageWidth.value >= 20000 || imageHeight.value >= 20000) {
+        warning.value = "The size cannot be greater than 20000."
+        return;
+      } else {
+        warning.value = "";
+      }
+
+      const context = canvasElement.getContext('2d');
+
+      canvasElement.width = imageWidth.value;
+      canvasElement.height = imageHeight.value;
+
+      if (context) {
+        context.font = `${canvasElement.width / 7}px Inter`;
+
+        context.fillStyle = '#ffffff';
+        context.fillRect(0, 0, imageWidth.value, imageHeight.value);
+
+        context.fillStyle = '#1e1e1e';
+        context.textAlign = 'center';
+        context.textBaseline = 'middle'
+        context.fillText(`${imageWidth.value}x${imageHeight.value}`, imageWidth.value / 2, imageHeight.value / 2);
+
+        console.log("Generated!");
+      }
     }
-
-    const context = canvasElement.getContext('2d');
-
-    canvasElement.width = imageWidth.value;
-    canvasElement.height = imageHeight.value;
-
-    if (context) {
-      context.font = `${canvasElement.width / 7}px Inter`;
-
-      context.fillStyle = '#ffffff';
-      context.fillRect(0, 0, imageWidth.value, imageHeight.value);
-
-      context.fillStyle = '#1e1e1e';
-      context.textAlign = 'center';
-      context.textBaseline = 'middle'
-      context.fillText(`${imageWidth.value}x${imageHeight.value}`, imageWidth.value / 2, imageHeight.value / 2);
-    }
+  } catch (error) {
+    console.error(error);
   }
 }
 

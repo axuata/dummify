@@ -104,7 +104,7 @@ function download(type: 'png' | 'jpeg') {
           <CButton label="Download as jpeg" @click="download('jpeg')" />
         </div>
       </CSection>
-      <CSection title="Result" class="mt-8px w-400px">
+      <CSection title="Result (Scaled down)" class="mt-8px w-400px">
         <div class="flex justify-center">
           <canvas id="canvas" class="max-w-300px"></canvas>
         </div>

@@ -82,19 +82,21 @@ function download(type: 'png' | 'jpeg') {
     <div>
       <p class="text-14px text-center mb-5px text-gray-6">Image Generator</p>
       <CSection title="Options" class="w-400px">
-        <div class="flex items-center justify-between px-8px py-4px">
-          <p class="text-gray-6">Width</p>
-          <CInput v-model="imageWidth" type="number" placeholder="1920" length="200px" />
+        <div>
+          <div class="flex items-center justify-between px-8px py-4px">
+            <p class="text-gray-6">Width</p>
+            <CInput v-model="imageWidth" type="number" placeholder="1920" length="200px" />
+          </div>
+          <div class="flex items-center justify-between px-8px py-4px">
+            <p class="text-gray-6">Height</p>
+            <CInput v-model="imageHeight" type="number" placeholder="1080" length="200px" />
+          </div>
+          <div class="flex items-center justify-between px-8px py-4px">
+            <p class="text-gray-6">Custom Text</p>
+            <CInput v-model="imageText" type="string" placeholder="" length="200px" />
+          </div>
+          <p class="text-14px text-orange-4 mx-8px">{{ imageWarning }}</p>
         </div>
-        <div class="flex items-center justify-between px-8px py-4px">
-          <p class="text-gray-6">Height</p>
-          <CInput v-model="imageHeight" type="number" placeholder="1080" length="200px" />
-        </div>
-        <div class="flex items-center justify-between px-8px py-4px">
-          <p class="text-gray-6">Custom Text</p>
-          <CInput v-model="imageText" type="string" placeholder="" length="200px" />
-        </div>
-        <p>{{ imageWarning }}</p>
         <hr class="m-5px" />
         <div class="flex gap-5px p-5px">
           <CButton label="Generate" @click="generate()" />

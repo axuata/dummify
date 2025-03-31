@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { consola } from "consola";
+
 const config = {
   width: ref<number>(0),
   height: ref<number>(0),
@@ -13,7 +15,7 @@ onMounted(() => {
 });
 
 function generate() {
-  console.log("Generating...");
+  consola.info('Generating...');
 
   if (canvasElement) {
     if (config.width.value >= 20000 || config.height.value >= 20000) {
@@ -45,12 +47,12 @@ function generate() {
       }
 
       isDownloadDisabled.value = false;
-      console.log("Generated!");
+      consola.info('Generated!');
     } else {
-      console.log('Context is null!');
+      consola.error('Context is null!');
     }
   } else {
-    console.log('Canvas is null!');
+    consola.error('Canvas is null!');
   }
 }
 

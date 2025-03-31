@@ -77,6 +77,15 @@ function download(type: 'png' | 'jpeg') {
 </script>
 
 <template>
+  <!-- What? -->
+  <div class="absolute left-6px top-10px">
+    <a href="https://github.com/axuata/dummify" class="font-500 bg-white px-8px py-6px rounded-8px b-(solid 1px gray-2) hover:bg-gray-1 transition-all duration-100">
+      <span class="text-gray-7">axuata</span>
+      <span class="text-gray-6"> / </span>
+      <span class="text-gray-7">dummify</span>
+    </a>
+  </div>
+
   <!-- Welcome -->
   <div class="my-16px text-center text-40px font-600 text-transparent bg-clip-text bg-gradient-to-b from-gray-6 to-gray-7 line-height-tight">
     <p>Dummify</p>

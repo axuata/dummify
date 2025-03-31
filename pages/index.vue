@@ -2,7 +2,8 @@
 const imageWidth = ref<number>(0);
 const imageHeight = ref<number>(0);
 const imageText = ref<string>('');
-const imageWarning= ref<string>('');
+const imageWarning = ref<string>('');
+const isImageDownloadDisabled = ref<boolean>(true);
 let canvasElement: HTMLCanvasElement;
 
 onMounted(() => {
@@ -41,6 +42,7 @@ function generate() {
         context.fillText(imageText.value, imageWidth.value / 2, imageHeight.value / 2);
       }
 
+      isImageDownloadDisabled.value = false;
       console.log("Generated!");
     } else {
       console.log('Context is null!');
@@ -99,9 +101,9 @@ function download(type: 'png' | 'jpeg') {
         </div>
         <hr class="m-5px" />
         <div class="flex gap-5px p-5px">
-          <CButton label="Generate" @click="generate()" />
-          <CButton label="Download as png" @click="download('png')" />
-          <CButton label="Download as jpeg" @click="download('jpeg')" />
+          <CButton label="Generate" @click="generate()" :is-disabled="false" />
+          <CButton label="Download as png" @click="download('png')" :is-disabled="isImageDownloadDisabled" />
+          <CButton label="Download as jpeg" @click="download('jpeg')" :is-disabled="isImageDownloadDisabled" />
         </div>
       </CSection>
       <CSection title="Result (Scaled down)" class="mt-8px w-400px">

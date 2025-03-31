@@ -23,7 +23,7 @@ function updateModel(event: Event) {
 
 <template>
   <div>
-    <input :type="props.type" :placeholder="props.placeholder" :style="{ width: props.length }" class="b-(solid 1px gray-2) px-6px py-2px rounded-8px" @input="updateModel($event)" />
+    <input :type="props.type" :placeholder="props.placeholder" :style="{ width: props.length }" class="b-(solid 1px gray-2) hover:b-gray-3 px-6px py-2px rounded-8px" @input="updateModel($event)" />
   </div>
 </template>
 

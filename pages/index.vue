@@ -77,12 +77,11 @@ function download(type: 'png' | 'jpeg') {
 </script>
 
 <template>
-  <!-- What? -->
-  <div class="absolute left-6px top-10px">
-    <a href="https://github.com/axuata/dummify" class="font-500 bg-white px-8px py-6px rounded-8px b-(solid 1px gray-2) hover:bg-gray-1 transition-all duration-100">
-      <span class="text-gray-7">axuata</span>
-      <span class="text-gray-6"> / </span>
-      <span class="text-gray-7">dummify</span>
+  <!-- Links -->
+  <div class="absolute left-0 top-0 p-5px">
+    <a href="https://github.com/axuata/dummify" class="flex items-center justify-center h-30px bg-white px-5px b-(solid 1px gray-2) hover:bg-gray-1 rounded-8px">
+      <img src="/images/brands/github.png" alt="GitHub Icon" class="size-17px" />
+      <p class="text-14px ml-4px text-gray-7">Github Repo</p>
     </a>
   </div>
 
